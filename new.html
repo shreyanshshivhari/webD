@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExploreWorld  Travel Agency</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+       
+        header {
+            
+            background-color: #3a87ad;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex; 
+            justify-content: center;
+            background-color: hsl(0, 0%, 93%);
+            padding: 10px;
+        }
+        nav div{
+            border: 1px solid ;
+            border-radius: 4px;
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            max-width: 45%;
+            padding: 5px;
+            border-color: #eee;
+            transition: 0.3s ease;
+        }
+        nav div:hover{
+            background-color: hsl(0, 0%, 73%);
+            box-shadow: 0px 4px 20px rgb(58, 61, 63);
+            border-color: #131111;
+        }
+        nav a {
+           
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .section {
+            
+            padding: 40px;
+        }
+        .section h2 {
+            text-align: center;
+            color: #3a87ad;
+        }
+        .packages, .tips, .gallery {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .package , .tip, .gallery-item {
+            flex: calc(30% - 20px);
+            margin: 10px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+        }
+        .gallery-item a{
+            text-decoration: none;
+            color: rgb(10, 153, 153);
+        }
+        .package img, .gallery-item img {
+            max-width: 100%;
+            height: 250px;
+            width: 600px;
+            border-radius: 5px;
+        }
+        .booking-form {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .booking-form label {
+            display: block;
+            margin: 10px 5px;
+        }
+        .booking-form input, .booking-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #0f0f0f;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #3a87ad;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div id="top">
+<header>
+    <h1>ExploreMore Travel Agency</h1>
+    <p>Your gateway to unforgettable journeys</p>
+</header>
+
+<nav>
+    <div>
+    <a href="#packages">Tour Packages</a></div>
+    <div><a href="#booking">Book a Trip</a></div>
+    <div><a href="#tips">Travel Tips</a></div>
+    <div><a href="#gallery">Gallery</a></div>
+</nav>
+</div>
+<div id="not-top">
+    <div id="fix"></div>
+<section id="packages" class="section">
+    <h2>Our Tour Packages</h2> 
+    <div class="packages">
+        <div class="package">
+            <img src="https://plus.unsplash.com/premium_photo-1669748157617-a3a83cc8ea23?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" >
+            <h3>Beach Getaway</h3>
+            <p>Relax on the pristine beaches of the Caribbean with our all-inclusive package.</p>
+            <p><strong>Price:</strong> ₹12000</p>
+        </div>
+        <div class="package">
+            <img src="https://www.wildnatureimages.com/images/xl/070926-017-Grand-Teton-Mountain.webp" >
+            <h3>Mountain Adventure</h3>
+            <p>Explore scenic mountain trails and breathtaking views with our guided tours.</p>
+            <p><strong>Price:</strong> ₹15000</p>
+        </div>
+        <div class="package">
+            <img src="https://images.pexels.com/photos/3527683/pexels-photo-3527683.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" >
+            <h3>City Explorer</h3>
+            <p>Discover the vibrant life of top cities around the world with our urban tours.</p>
+            <p><strong>Price:</strong> ₹10000</p>
+        </div>
+    </div>
+</section>
+
+<section id="booking" class="section">
+    
+    <h2>Book a Trip</h2>
+    <form class="booking-form" action="internal.html">
+        <label for="destination">Choose a Destination</label>
+        <select id="destination" required >
+            <option value="beach">Beach Getaway</option>
+            <option value="mountain">Mountain Adventure</option>
+            <option value="city">City Explorer</option>
+        </select>
+
+        <label for="date">Travel Date</label>
+        <input type="date" id="date" required>
+
+        <label for="guests">Number of Guests</label>
+        <input type="number" id="guests" min="1" max="20" required>
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" required>
+
+        
+        <button type="submit">Book Now</button>
+        
+    </form>
+</section>
+
+<section id="tips" class="section">
+    <h2>Travel Tips</h2>
+    <div class="tips">
+        <div class="tip">
+            <h3>Packing Essentials</h3>
+            <p>Learn how to pack light yet have everything you need for your trip.</p>
+        </div>
+        <div class="tip">
+            <h3>Health and Safety</h3>
+            <p>Stay safe with our health and travel safety guidelines.</p>
+        </div>
+        <div class="tip">
+            <h3>Local Customs</h3>
+            <p>Understand the local culture and customs of your destination.</p>
+        </div>
+    </div>
+</section>
+
+<section id="gallery" class="section">
+    <h2>Travel Gallery</h2>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="https://worldwildschooling.com/wp-content/uploads/2024/05/Punta-Cana-Dominican-Republic_KellySHUTSTOC_shutterstock_282220313.jpg" height="1000px" width="100%" >
+            <p>Beautiful beaches of the Caribbean</p>
+            <a href="index.html">EXPLORE MORE</a>
+        </div>
+        <div class="gallery-item">
+            <img src="https://www.extremetur.com/wp-content/uploads/2023/11/alp-mountain-1-1536x1024.jpg" height="60%" width="100%">
+            <p>Scenic Beauty of Mountains</p>
+            <a href="index1.html">EXPLORE MORE</a>
+        </div>
+        <div class="gallery-item">
+            <img src="8r5btess.bmp" height="70%" width="100%">
+            <p>Explore the Modern Cities of America</p> 
+            <a href="index2.html">EXPLORE MORE </a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 ExploreMore Travel Agency | Follow us on social media</p>
+    <img src="Instagram_icon.png.webp" alt="instagram" height="35px">
+    <img src="Untitled.png" alt="twitter" height="35px">
+</footer>
+</div>
+</body>
+</html>
